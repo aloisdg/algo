@@ -10,7 +10,8 @@ namespace Levenshtein
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Levenshtein.FindDistance("alois", "aloisdg"));
+            Console.WriteLine(Levenshtein.FindDistance("Alois", "aloisdg"));
+            Console.WriteLine(Levenshtein.FindDistance("Alois", "aloisdg"));
             Console.ReadLine();
         }
     }

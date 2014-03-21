@@ -8,14 +8,22 @@ namespace Levenshtein
 {
     public static class Levenshtein
     {
-        // , bool forceLowerCase = false
-        public static int FindDistance(string s1, string s2)
+        /*
+         * http://en.wikipedia.org/wiki/Levenshtein_distance
+         */
+        public static int FindDistance(string s1, string s2, bool forceLowerCase = false)
         {
             if (String.IsNullOrEmpty(s1) || s1.Length == 0)
                 return String.IsNullOrEmpty(s2) ? s2.Length : 0;
             if (String.IsNullOrEmpty(s2) || s2.Length == 0)
                 return String.IsNullOrEmpty(s1) ? s1.Length : 0;
-            
+
+            // not in Levenshtein but I need it.
+            if (forceLowerCase)
+            {
+                s1 = s1.ToLowerInvariant();
+                s2 = s2.ToLowerInvariant();
+            }
 
             int s1Len = s1.Length;
             int s2Len = s2.Length;

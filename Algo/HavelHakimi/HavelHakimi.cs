@@ -11,7 +11,7 @@ namespace HavelHakimi
         /*
         ** http://coddicted.com/the-havel-hakimi-algorithm/
         */
-        public static bool isGraph(List<int> vertices)
+        public static bool isGraphical(List<int> vertices)
         {
             int verticesCount = vertices.Count;
 
@@ -65,15 +65,15 @@ namespace HavelHakimi
         {
             for (int i = 0; i < vertices.Count - 1; i++)
             {
-                int biggest = i;
+                int greatest = i;
                 for (int j = i + 1; j < vertices.Count; j++)
-                    if (vertices[j] > vertices[biggest])
-                        biggest = j;
-                if (biggest != i)
+                    if (vertices[j] > vertices[greatest])
+                        greatest = j;
+                if (greatest != i)
                 {
                     int tmp = vertices[i]; // just for fun http://stackoverflow.com/q/804706/1248177
-                    vertices[i] = vertices[biggest];
-                    vertices[biggest] = tmp;
+                    vertices[i] = vertices[greatest];
+                    vertices[greatest] = tmp;
                 }
             }
             return vertices;

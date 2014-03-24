@@ -10,6 +10,9 @@ namespace HavelHakimi
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(HavelHakimi.isGraph(new List<int>() { 1, 1 }));
+            Console.WriteLine(HavelHakimi.isGraph(new List<int>() { 2, 1 }));
+            Console.ReadLine();
         }
     }
 }

@@ -10,8 +10,10 @@ namespace HavelHakimi
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(HavelHakimi.isGraph(new List<int>() { 1, 1 }));
-            Console.WriteLine(HavelHakimi.isGraph(new List<int>() { 2, 1 }));
+            Console.WriteLine(HavelHakimi.isGraphical(new List<int>() { 1, 1 }));
+            Console.WriteLine(HavelHakimi.isGraphical(new List<int>() { 4, 3, 3, 3, 1 }));
+            Console.WriteLine(HavelHakimi.isGraphical(new List<int>() { 7, 5, 5, 4, 4, 4, 4, 3 }));
+            Console.WriteLine(HavelHakimi.isGraphical(new List<int>() { 2, 1 }));
             Console.ReadLine();
         }
     }

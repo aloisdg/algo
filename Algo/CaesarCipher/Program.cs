@@ -16,11 +16,12 @@ namespace CaesarCipher
             str = CaesarCipher.Decrypt(str, 6);
             Console.WriteLine("Decrypted: {0}", str);
 
-            str = "je t'aime";
+            str = "js";
             for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine(str == CaesarCipher.Decrypt(CaesarCipher.Encrypt(str, i), i)
-                    ? "{0} ok" : "{0} ko", i);
+                var e = CaesarCipher.Encrypt(str, i);
+                var d = CaesarCipher.Decrypt(e, i);
+                Console.WriteLine("{0:D4} {1} {2} {3}", i, str == d ? "ok" : "ko", e, d);
             }
             Console.ReadLine();
         }

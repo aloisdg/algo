@@ -16,7 +16,7 @@ namespace CaesarCipher
             str = CaesarCipher.Decrypt(str, 6);
             Console.WriteLine("Decrypted: {0}", str);
 
-            str = "js";
+            str = "jsAAAtOTo";
             for (int i = 0; i < 20; i++)
             {
                 var e = CaesarCipher.Encrypt(str, i);

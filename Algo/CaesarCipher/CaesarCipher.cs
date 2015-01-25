@@ -43,10 +43,9 @@ namespace CaesarCipher
             // check case by hand
             return from letter in letters
                    let l = (char)(letter + shift)
+                   let diffCase = Char.IsLower(letter) ? 0 : 32
                    select Char.IsLetter(letter)
-                       ? Char.IsLower(letter)
-                        ? (char)(l > 'z' ? l - 26 : l < 'a' ? l + 26 : l)
-                        : (char)(l > 'Z' ? l - 26 : l < 'A' ? l + 26 : l)
+                       ? (char)(l > 'z' - diffCase ? l - 26 : l < 'a' - diffCase ? l + 26 : l)
                        : letter;
         }
     }

@@ -29,23 +29,14 @@ namespace CaesarCipher
 
         public static IEnumerable<char> MoveLetters(string letters, int shift)
         {
-            //foreach (var letter in letters)
-            //{
-            //    char offset = Char.IsUpper(letter) ? 'A' : 'a';
-            //    int i = letter + shift - offset;
-            //    int m = i%26;
-            //    int o = m + offset;
-            //    char c = (char) o;
-            //    char l = Char.IsLetter(letter) ? c : letter;
-            //    yield return l;
-            //}
-
-            // check case by hand
             return from letter in letters
-                   let l = (char)(letter + shift)
                    let diffCase = Char.IsLower(letter) ? 0 : 32
-                   select Char.IsLetter(letter)
-                       ? (char)(l > 'z' - diffCase ? l - 26 : l < 'a' - diffCase ? l + 26 : l)
+                   let max = 'z' - diffCase
+                   let min = 'a' - diffCase
+                   let isAsciiLetter = letter >= min && letter <= max
+                   let l = (char)(letter + shift % 26)
+                   select isAsciiLetter
+                       ? (char)(l > max ? l - 26 : l < min ? l + 26 : l)
                        : letter;
         }
     }

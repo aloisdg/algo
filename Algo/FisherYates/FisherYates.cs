@@ -11,21 +11,21 @@ namespace FisherYates
 
         static readonly Random Rand = new Random();
 
-		public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> list)
+	public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> list)
+	{
+		var rand = Rand;
+		var enumerable = list as T[] ?? list.ToArray();
+		for (var i = enumerable.Length; i > 1; i--)
 		{
-			var rand = Rand;
-			var enumerable = list as T[] ?? list.ToArray();
-			for (var i = enumerable.Length; i > 1; i--)
-			{
-				// First step : Pick random element to swap.
-				var j = rand.Next(i);
-
-				// Second step : Swap.
-				var tmp = enumerable[j];
-				enumerable[j] = enumerable[i - 1];
-				enumerable[i - 1] = tmp;
-			}
-			return enumerable;
+			// First step : Pick random element to swap.
+			var j = rand.Next(i);
+			
+			// Second step : Swap.
+			var tmp = enumerable[j];
+			enumerable[j] = enumerable[i - 1];
+			enumerable[i - 1] = tmp;
 		}
+		return enumerable;
+	}
     }
 }

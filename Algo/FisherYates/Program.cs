@@ -7,17 +7,18 @@ namespace FisherYates
     {
         static void Main(string[] args)
         {
-            List<int> nums = new List<int>( ) { 0, 1, 2, 3 };
-            FisherYates.Shuffle<int>(nums);
+			var nums = Enumerable.Range(0, 10);
+            var numsShuffled = nums.Shuffle<int>();
 
-            foreach (var item in nums)
-                Console.WriteLine(String.Format("{0}", item));
+            foreach (var item in numsShuffled)
+                Console.Write("{0} ", item);
+            Console.WriteLine();
 
-            List<string> list = new List<string>() { "fisher", "yates", "havel", "hakimi" };
-            FisherYates.Shuffle<string>(list);
-
-            foreach (var item in list)
-                Console.WriteLine(String.Format("{0}", item));
+            var list = new List<string> { "fisher", "yates", "havel", "hakimi" };
+            var listShuffled = list.Shuffle<string>();
+			
+			foreach (var item in listShuffled)
+                Console.Write("{0} ", item);
             Console.ReadLine();
         }
     }

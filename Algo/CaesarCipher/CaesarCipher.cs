@@ -27,6 +27,7 @@ namespace CaesarCipher
             return new String(MoveLetters(letters, shift).ToArray());
         }
 
+        //http://stackoverflow.com/questions/8501444/caesar-cipher-in-c-sharp?rq=1
         public static IEnumerable<char> MoveLetters(string letters, int shift)
         {
             return from letter in letters

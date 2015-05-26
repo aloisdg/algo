@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FisherYates
 {
@@ -19,7 +20,7 @@ namespace FisherYates
 		{
 			// First step : Pick random element to swap.
 			var j = rand.Next(i);
-			
+
 			// Second step : Swap.
 			var tmp = enumerable[j];
 			enumerable[j] = enumerable[i - 1];

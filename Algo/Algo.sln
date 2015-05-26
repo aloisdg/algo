@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FisherYates", "FisherYates\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaesarCipher", "CaesarCipher\CaesarCipher.csproj", "{407A4B68-3898-4770-911C-A73738442ED5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyNumber", "HappyNumber\HappyNumber.csproj", "{E3B4A2A1-03C7-46C4-8955-85B9FE780821}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{407A4B68-3898-4770-911C-A73738442ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{407A4B68-3898-4770-911C-A73738442ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{407A4B68-3898-4770-911C-A73738442ED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3B4A2A1-03C7-46C4-8955-85B9FE780821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3B4A2A1-03C7-46C4-8955-85B9FE780821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3B4A2A1-03C7-46C4-8955-85B9FE780821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3B4A2A1-03C7-46C4-8955-85B9FE780821}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 algo
 ====
 
-I will put here some algorithms I wrote. Mostly C#.
+I will put here some algorithms I wrote for fun. Mostly C#.
 
 You can find :
 
